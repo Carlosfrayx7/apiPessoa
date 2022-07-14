@@ -57,3 +57,4 @@ C:\Users\User\source\repos\PessoaApi\PessoaApi\obj\Debug\net5.0\PessoaApi.dll
 C:\Users\User\source\repos\PessoaApi\PessoaApi\obj\Debug\net5.0\ref\PessoaApi.dll
 C:\Users\User\source\repos\PessoaApi\PessoaApi\obj\Debug\net5.0\PessoaApi.pdb
 C:\Users\User\source\repos\PessoaApi\PessoaApi\obj\Debug\net5.0\PessoaApi.genruntimeconfig.cache
+C:\Users\User\source\repos\PessoaApi\PessoaApi\obj\Debug\net5.0\PessoaApi.csproj.AssemblyReference.cache

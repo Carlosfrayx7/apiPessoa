@@ -82,20 +82,15 @@ namespace PessoaApi.Controllers
         /// Endpoint para atualizar pessoas
         /// </summary>
         /// <returns></returns>
-        [HttpPut]
-        public async Task<ActionResult<List<Pessoa>>> UpdatePessoa(Guid id, [FromBody]Pessoa pessoa)
+        [HttpPost]
+        [Route("updatepessoa")]
+        public async Task<ActionResult<List<Pessoa>>> UpdatePessoa([FromBody]Pessoa pessoa)
         {
             try
             {
-               if(pessoa.Id.Equals(id))
-                {
-                    await _pessoaService.UpdatePessoa(pessoa);
+                  await _pessoaService.UpdatePessoa(pessoa);
                     return Ok("Pessoa alterada com sucesso.");
-                }
-                else
-                {
-                    return BadRequest("Não foi possível alterar pessoa");
-                }
+               
             }
             catch (Exception ex)
             {
