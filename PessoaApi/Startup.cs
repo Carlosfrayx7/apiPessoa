@@ -48,6 +48,11 @@ namespace PessoaApi
                                     builder.SetIsOriginAllowed(_ => true).AllowAnyHeader().AllowAnyMethod().AllowCredentials();
                                 });
             });
+
+            services.AddHttpsRedirection(options =>
+            {
+                options.HttpsPort = 443;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -62,7 +67,9 @@ namespace PessoaApi
 
             app.UseCors();
 
-            //app.UseHttpsRedirection();
+            app.UseHttpsRedirection();
+
+            app.UseHsts(); 
 
             app.UseRouting();
 
